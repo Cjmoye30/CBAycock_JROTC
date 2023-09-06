@@ -1,0 +1,11 @@
+/* *{
+  border: 1px solid black;
+} */
+
+.App {
+  min-height: 100vh;
+}
+
+body {
+  background-color: rgb(206, 206, 206);
+}
