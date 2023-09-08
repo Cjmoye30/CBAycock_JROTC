@@ -27,3 +27,8 @@ a {
   border-radius: 10px;
   overflow: hidden;
 }
+
+.eventImg {
+  height: 400px;
+  width: auto;
+}
