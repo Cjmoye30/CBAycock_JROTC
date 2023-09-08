@@ -5,13 +5,27 @@ import Button from '@mui/material/Button';
 import List from '@mui/material/List';
 import Divider from '@mui/material/Divider';
 import Chip from '@mui/material/Chip';
-import ListItem from '@mui/material/ListItem';
 import ListItemButton from '@mui/material/ListItemButton';
 import { Link } from "react-router-dom";
-import '../styles/header.css'
 import { useState } from 'react';
+import { createTheme, ThemeProvider } from '@mui/material/styles';
+
+import '../styles/header.css'
 
 const Header = () => {
+
+    // const theme = createTheme({
+    //     components: {
+    //         MuiListItemButton: {
+    //             styleOverrides: {
+    //                 root: {
+    //                     backgroundColor: 'red',
+                        
+    //                 }
+    //             }
+    //         }
+    //     }
+    // })
 
     const [state, setState] = useState({ right: false });
 
@@ -29,39 +43,42 @@ const Header = () => {
             role="presentation"
             onClick={toggleDrawer(anchor, false)}
             onKeyDown={toggleDrawer(anchor, false)}
+            className='menuDrawer'
         >
             <List>
 
-                <ListItemButton>
-                    <Link to='/'>Home</Link>
+                {/* <ThemeProvider theme={theme}> */}
+
+                <ListItemButton className='menuButton'>
+                    <Link className='menuLink' to='/'>Home</Link>
                 </ListItemButton>
 
                 <ListItemButton>
-                    <Link to='/events'>Events</Link>
+                    <Link className='menuLink' to='/events'>Events</Link>
                 </ListItemButton>
 
                 <ListItemButton>
-                    <Link to='/calendar'>Calendar</Link>
+                    <Link className='menuLink' to='/calendar'>Calendar</Link>
                 </ListItemButton>
 
                 <ListItemButton>
-                    <Link to='/syllabus'>Syllabus</Link>
+                    <Link className='menuLink' to='/syllabus'>Syllabus</Link>
                 </ListItemButton>
 
                 <ListItemButton>
-                    <Link to='/classInfo'>Class Information</Link>
+                    <Link className='menuLink' to='/classInfo'>Class Information</Link>
                 </ListItemButton>
 
                 <ListItemButton>
-                    <Link to='/classInfo'>Continued Education</Link>
+                    <Link className='menuLink' to='/contEducation'>Continued Education</Link>
                 </ListItemButton>
 
                 <ListItemButton disabled>
-                    <Link to='/'>Golden Falcon Batallion Alumni</Link>
+                    <Link className='menuLink' to='/'>Golden Falcon Batallion Alumni</Link>
                 </ListItemButton>
 
                 <ListItemButton disabled>
-                    <Link to='/login'>Login</Link>
+                    <Link className='menuLink' to='/login'>Login</Link>
                 </ListItemButton>
 
                 <Divider>
@@ -70,13 +87,14 @@ const Header = () => {
 
                 
                 <ListItemButton>
-                    <Link to='https://go.boarddocs.com/nc/wcpsnc/Board.nsf/files/CMRTGM77530D/$file/2023-2024%20WCPS%20Calendar%20FINAL%20TRADITIONAL.pdf' target='_blank'>Wayne County Public Schools 2023-2024 School Calendar</Link>
+                    <Link className='menuLink' to='https://go.boarddocs.com/nc/wcpsnc/Board.nsf/files/CMRTGM77530D/$file/2023-2024%20WCPS%20Calendar%20FINAL%20TRADITIONAL.pdf' target='_blank'>Wayne County Public Schools 2023-2024 School Calendar</Link>
                 </ListItemButton>
                 
                 <ListItemButton>
-                    <Link to='https://www.usarmyjrotc.com/' target='_blank'>U.S. Army JROTC</Link>
+                    <Link className='menuLink' to='https://www.usarmyjrotc.com/' target='_blank'>U.S. Army JROTC</Link>
                 </ListItemButton>
 
+                {/* </ThemeProvider> */}
             </List>
 
         </Box>

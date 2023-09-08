@@ -5,3 +5,15 @@ header {
     align-items: center;
     color: gold;
 }
+
+.menuDrawer {
+    background-color: rgb(255, 194, 194);
+    height: 100%;
+    display: flex;
+}
+
+.menuLink {
+    padding: 10px;
+    width: 100%;
+    text-align: end;
+}
