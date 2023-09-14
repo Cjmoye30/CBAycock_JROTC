@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { gapi } from "gapi-script";
 import moment from "moment/moment";
+import { useLocation } from 'react-router-dom';
 
 function Events() {
+
+    const { pathname } = useLocation();
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [pathname])
+
     const [events, setEvents] = useState([]);
 
     const calendarID = process.env.REACT_APP_CALENDAR_ID;

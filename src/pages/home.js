@@ -9,12 +9,39 @@ import Tab from '@mui/material/Tab';
 import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
+import { Grid } from "@mui/material";
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 
 import alphaCompany from "../data/alpha";
 import bravoCompany from "../data/bravo";
 import charlieCompany from "../data/charlie";
 
 const Home = () => {
+
+    const { pathname } = useLocation();
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [pathname])
+
+    const quickLinksArray2 = [
+        {
+            name: 'Syllabus',
+            link: 'syllabus'
+        },
+        {
+            name: 'Class Information',
+            link: 'classInfo'
+        },
+        {
+            name: 'All Events',
+            link: 'events'
+        },
+        {
+            name: 'Class Calendar',
+            link: 'calendar'
+        }
+    ];
 
     const [value, setValue] = React.useState('alpha');
 
@@ -24,7 +51,7 @@ const Home = () => {
 
     return (
         <>
-            <Box className="upcomingEventsWrapper">
+            <Box className="upcomingEventsSection">
                 <div className="containerHeader">
                     <h4>Upcoming Events:</h4>
                     <h4>Date: {moment().format('MMMM DD, YYYY')} </h4>
@@ -50,12 +77,19 @@ const Home = () => {
                 </TabContext>
             </Box>
 
-            <Box sx={{textAlign: 'center'}}>
-                <h1>Helpful links here:</h1>
-                <button>Syllabus</button>
-                <button>Class Information</button>
-                <button>All Events</button>
-                <button>School Calendar</button>
+            <Box className='quickLinksSection' sx={{ textAlign: 'center' }}>
+                <h1>Quick Links:</h1>
+                <Grid container justifyContent='center'>
+                    {quickLinksArray2.map((link, index) => (
+                        <Grid key={index} item sm={6} xs={12}>
+                            <Grid item xs={12} alignItems='center'>
+                                <Link to={`/${link.link}`} className="quickLinkItem" >
+                                    {link.name}
+                                </Link>
+                            </Grid>
+                        </Grid>
+                    ))}
+                </Grid>
             </Box>
         </>
     )

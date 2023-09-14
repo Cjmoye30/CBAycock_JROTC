@@ -1,6 +1,8 @@
-.upcomingEventsWrapper {
-    margin: 10px;
+.upcomingEventsSection {
+    margin: 0px;
     padding: 10px;
+    background-color: rgb(217, 255, 217);
+    margin-bottom: 0;
 }
 
 .containerHeader {
@@ -16,4 +18,19 @@
 
 .companySection {
     text-align: center;
+    background-color: rgb(167, 167, 255);
+}
+
+.quickLinksSection {
+    background-color: rgb(255, 167, 167);
+}
+
+.quickLinkItem {
+    display: flex;
+    justify-content: center;
+    min-height: 50px;
+    align-items: center;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
 }

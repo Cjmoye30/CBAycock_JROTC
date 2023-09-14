@@ -1,4 +1,6 @@
 import * as React from 'react'
+import { Grid } from '@mui/material';
+
 import '../styles/classCompany.css'
 
 const ClassCompany = ({ company }) => {
@@ -8,21 +10,22 @@ const ClassCompany = ({ company }) => {
 
     return (
         <>
-            <div>
-                <h3>Roster:</h3>
-                <>
-                    {data.students.map((students) => (
-                        <p>{students}</p>
-                    ))}
-                </>
+                <Grid container>
+                    <Grid container sm={6} xs={12} justifyContent='center'>
+                        {data.students.map((students, index) => (
+                            <Grid key={index} item sm={6} xs={12} sx={{p:2}}>
+                                <p className='studentItem'>{students}</p>
+                            </Grid>
+                        ))}
+                    </Grid>
 
-                <>
-                {data.images.map((img) => (
-                    <img className='companyImg' src={img} />
-                ))}
-                </>
-            </div>
-
+                    {/* turn into an image slider */}
+                    <Grid container sm={6} xs={12} justifyContent='center'>
+                        {data.images.map((img, index) => (
+                            <img className='companyImg' src={img} key={index} />
+                        ))}
+                    </Grid>
+                </Grid>
         </>
     )
 }

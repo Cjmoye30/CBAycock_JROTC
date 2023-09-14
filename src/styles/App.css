@@ -1,17 +1,21 @@
-/* *{
+*{
   border: 1px solid black;
-} */
+}
 
 .App {
   min-height: 100vh;
 }
 
 body {
-  background-color: rgb(206, 206, 206);
+  background-color: rgb(235, 255, 226);
 }
 
 a {
   text-decoration: none;
+}
+
+h1 {
+  margin: 0;
 }
 
 .calendarWrapper {

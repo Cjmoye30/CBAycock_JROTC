@@ -1,3 +1,10 @@
 .companyImg {
     height: 200px;
+    margin: 5px;
+    object-fit: cover;
+}
+
+.studentItem {
+    overflow: hidden;
+    word-wrap: break-word;
 }
