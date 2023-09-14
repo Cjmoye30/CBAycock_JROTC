@@ -1,0 +1,19 @@
+.upcomingEventsWrapper {
+    margin: 10px;
+    padding: 10px;
+}
+
+.containerHeader {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.eventItem {
+    padding: 0;
+    margin: 0;
+}
+
+.companySection {
+    text-align: center;
+}
