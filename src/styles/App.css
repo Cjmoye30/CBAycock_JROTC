@@ -1,6 +1,6 @@
-*{
+/* *{
   border: 1px solid black;
-}
+} */
 
 .App {
   min-height: 100vh;
@@ -8,6 +8,8 @@
 
 body {
   background-color: rgb(235, 255, 226);
+  max-width: 1750px;
+  margin: 0 auto;
 }
 
 a {
@@ -32,7 +34,11 @@ h1 {
   overflow: hidden;
 }
 
+.carouselContainer {
+  height: 100%;
+}
+
 .eventImg {
-  height: 400px;
-  width: auto;
+  height: auto;
+  width: 100%;
 }

@@ -51,7 +51,7 @@ const Home = () => {
 
     return (
         <>
-            <Box className="upcomingEventsSection">
+            <Box className="upcomingEventsSection section">
                 <div className="containerHeader">
                     <h4>Upcoming Events:</h4>
                     <h4>Date: {moment().format('MMMM DD, YYYY')} </h4>
@@ -61,7 +61,7 @@ const Home = () => {
                 <Link className="pageLink" to='/events'>View all Events</Link>
             </Box>
 
-            <Box sx={{ width: '100%' }} className='companySection'>
+            <Box className='companySection section'>
                 <h1>GOLDEN FALCONS BATALLION</h1>
                 <TabContext value={value}>
                     <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
@@ -77,7 +77,7 @@ const Home = () => {
                 </TabContext>
             </Box>
 
-            <Box className='quickLinksSection' sx={{ textAlign: 'center' }}>
+            <Box className='quickLinksSection section' sx={{ textAlign: 'center' }}>
                 <h1>Quick Links:</h1>
                 <Grid container justifyContent='center'>
                     {quickLinksArray2.map((link, index) => (
