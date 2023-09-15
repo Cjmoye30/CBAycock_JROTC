@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/CBAycock_JROTC/static/css/main.c48e8b62.css",
+    "main.js": "/CBAycock_JROTC/static/js/main.e5f8597e.js",
+    "static/js/787.3628af55.chunk.js": "/CBAycock_JROTC/static/js/787.3628af55.chunk.js",
+    "index.html": "/CBAycock_JROTC/index.html",
+    "main.c48e8b62.css.map": "/CBAycock_JROTC/static/css/main.c48e8b62.css.map",
+    "main.e5f8597e.js.map": "/CBAycock_JROTC/static/js/main.e5f8597e.js.map",
+    "787.3628af55.chunk.js.map": "/CBAycock_JROTC/static/js/787.3628af55.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c48e8b62.css",
+    "static/js/main.e5f8597e.js"
+  ]
+}
