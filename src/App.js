@@ -17,12 +17,12 @@ function App() {
 
   return (
 
-    <Router>
+    <Router basename='/CBAycock_JROTC'>
       <Header />
       <div className="App">
         <Routes>
 
-          {/* <Route path="*" element={<Home />} /> */}
+          <Route path="*" element={<Home />} />
           <Route path="/" element={<Home />} />
           <Route path='/events' element={<Events />} />
           <Route path='/calendar' element={<Calendar />} />
