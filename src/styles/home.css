@@ -13,9 +13,20 @@
     flex-direction: row;
 }
 
-.eventItem {
-    padding: 0;
+.eventContent {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(255, 180, 180);
+    margin: 10px 0;
+    align-items: center;
+}
+
+.eventDesc {
     margin: 0;
+}
+
+.allEventsLink {
+    background-color: red;
 }
 
 .companySection {

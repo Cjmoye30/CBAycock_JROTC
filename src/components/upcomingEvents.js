@@ -108,24 +108,15 @@ function UpcomingEvents() {
     return (
         <>
             {events?.map((event) => (
-                <ThemeProvider theme={theme}>
-
-                    <Link key={event.id} to={event.htmlLink} target="_blank">
-
-                        <div className="containerHeader">
-                            <h3 className="eventItem eventSummary">{event.summary}</h3>
-                            <p className="eventItem eventDate">Date: {event.start.date || event.start.dateTime}</p>
-                        </div>
-
-                        <h6 className="eventItem eventDescription"> Description: {event.description}</h6>
-                        {/* {event.attachments?.map((image, index) => (
-                            <p key={index}> <img className="eventImg" src={`https://drive.google.com/uc?id=${image.fileId}`} /> </p>
-                        ))} */}
-                    </Link>
-                </ThemeProvider>
+                <Link to={`${event.htmlLink}`} target="_blank" className="eventContent">
+                    <div>
+                        <h1 className="eventTitle">{event.summary}</h1>
+                        <p className="eventDesc">{event.description}</p>
+                    </div>
+                        <p className="eventStartDate">{event.start.date || event.start.dateTime}</p>
+                </Link>
             ))}
         </>
-
     );
 }
 

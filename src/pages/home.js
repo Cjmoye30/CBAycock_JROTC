@@ -58,7 +58,11 @@ const Home = () => {
                 </div>
                 <hr />
                 <Events />
-                <Link className="pageLink" to='/events'>View all Events</Link>
+                <Link to='/events' className="eventContent">
+                    <div>
+                        <p>All Events</p>
+                    </div>
+                </Link>
             </Box>
 
             <Box className='companySection section'>
